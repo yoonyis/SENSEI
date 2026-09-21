@@ -1,0 +1,680 @@
+/* =========================
+   GLOBAL APP
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f7fb;
+  color: #111827;
+}
+
+button,
+textarea,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 35px;
+  padding-bottom: 110px;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =========================
+   BOTTOM NAVIGATION
+========================= */
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 75px;
+
+  background: white;
+  border-top: 1px solid #e5e7eb;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  z-index: 100;
+}
+
+.bottom-nav button {
+  border: none;
+  background: transparent;
+
+  padding: 10px 18px;
+
+  border-radius: 12px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.bottom-nav button span {
+  font-size: 20px;
+}
+
+.bottom-nav button:hover {
+  background: #f3f4f6;
+}
+
+.bottom-nav button.active {
+  color: #6366f1;
+  background: #eef2ff;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-page {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.small-label {
+  color: #6366f1;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+/* =========================
+   OVERALL MASTERY
+========================= */
+
+.overall-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+
+  padding: 25px;
+
+  margin-bottom: 20px;
+}
+
+.card-label {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.overall-number {
+  font-size: 48px;
+  font-weight: bold;
+
+  margin: 8px 0 15px;
+}
+
+.large-progress {
+  width: 100%;
+  height: 12px;
+
+  background: #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.large-progress > div {
+  height: 100%;
+  background: #6366f1;
+  border-radius: 20px;
+}
+
+/* =========================
+   BIGGEST GAP
+========================= */
+
+.weakness-card {
+  background: #eef2ff;
+
+  border: 1px solid #c7d2fe;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  margin-bottom: 35px;
+}
+
+.weakness-label {
+  color: #6366f1;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 1px;
+}
+
+.weakness-card h2 {
+  margin: 8px 0;
+
+  font-size: 28px;
+}
+
+.weakness-card p {
+  color: #4b5563;
+}
+
+.weakness-card button {
+  border: none;
+
+  background: #6366f1;
+
+  color: white;
+
+  padding: 12px 18px;
+
+  border-radius: 10px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+/* =========================
+   TOPICS
+========================= */
+
+.section-title {
+  font-size: 20px;
+
+  margin-bottom: 18px;
+}
+
+.topics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 18px;
+}
+
+.topic-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  padding: 20px;
+}
+
+.topic-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 20px;
+}
+
+.topic-icon {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 12px;
+
+  background: #eef2ff;
+
+  color: #6366f1;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+}
+
+.topic-card h3 {
+  margin: 0 0 4px;
+
+  font-size: 18px;
+}
+
+.topic-card p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+/* =========================
+   MASTERY BAR
+========================= */
+
+.mastery-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.mastery-background {
+  flex: 1;
+
+  height: 9px;
+
+  background: #e5e7eb;
+
+  border-radius: 20px;
+
+  overflow: hidden;
+}
+
+.mastery-fill {
+  height: 100%;
+
+  background: #6366f1;
+
+  border-radius: 20px;
+}
+
+.mastery-value {
+  font-size: 13px;
+
+  font-weight: bold;
+
+  min-width: 35px;
+}
+
+/* =========================
+   ASK SENSEI
+========================= */
+
+.ask-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ask-page h1 {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.ask-page > p {
+  color: #6b7280;
+  font-size: 17px;
+}
+
+.ask-page textarea {
+  width: 100%;
+  max-width: 700px;
+
+  padding: 15px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 15px;
+
+  resize: vertical;
+
+  font-size: 16px;
+
+  margin: 20px 0;
+
+  display: block;
+
+  box-sizing: border-box;
+
+  background: white;
+}
+
+.ask-page button {
+  border: none;
+
+  padding: 14px 20px;
+
+  border-radius: 12px;
+
+  background: #6366f1;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.ask-page button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+.ai-answer {
+  max-width: 700px;
+
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  padding: 20px;
+
+  margin-top: 25px;
+
+  line-height: 1.7;
+
+  box-sizing: border-box;
+}
+
+.ai-answer h2 {
+  margin-top: 0;
+
+  color: #6366f1;
+}
+
+/* =========================
+   PRACTICE PAGE
+========================= */
+
+.practice-page {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.practice-header {
+  margin-bottom: 25px;
+}
+
+.practice-header h1 {
+  margin: 5px 0;
+}
+
+.practice-header p {
+  color: #6b7280;
+}
+
+.question-card {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+.question-topic {
+  display: inline-block;
+
+  background: #eef2ff;
+
+  color: #6366f1;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.question-card h2 {
+  font-size: 23px;
+
+  line-height: 1.5;
+
+  margin-bottom: 25px;
+}
+
+.options {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.option {
+  width: 100%;
+
+  padding: 16px;
+
+  border: 2px solid #e5e7eb;
+
+  border-radius: 14px;
+
+  background: white;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  transition: 0.2s;
+}
+
+.option:hover {
+  border-color: #6366f1;
+}
+
+.option.selected {
+  border-color: #6366f1;
+
+  background: #eef2ff;
+}
+
+.option.correct {
+  border-color: #22c55e;
+
+  background: #f0fdf4;
+}
+
+.option.incorrect {
+  border-color: #ef4444;
+
+  background: #fef2f2;
+}
+
+.option-letter {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+
+  background: #f3f4f6;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-weight: bold;
+
+  flex-shrink: 0;
+}
+
+.submit-answer,
+.next-question,
+.practice-result button {
+  border: none;
+
+  padding: 14px 22px;
+
+  border-radius: 12px;
+
+  background: #6366f1;
+
+  color: white;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  margin-top: 22px;
+}
+
+.submit-answer:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+.diagnosis-box {
+  margin-top: 25px;
+
+  padding: 20px;
+
+  border-radius: 15px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e5e7eb;
+}
+
+.diagnosis-box h3 {
+  margin-top: 0;
+}
+
+.practice-score {
+  text-align: center;
+
+  margin-top: 18px;
+
+  font-weight: bold;
+}
+
+.practice-result {
+  background: white;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  text-align: center;
+}
+
+.practice-result h2 {
+  font-size: 48px;
+
+  margin: 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .content {
+    padding: 20px;
+
+    padding-bottom: 100px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom-nav {
+    gap: 0;
+  }
+
+  .bottom-nav button {
+    padding: 8px 10px;
+
+    font-size: 11px;
+  }
+
+  .bottom-nav button span {
+    font-size: 18px;
+  }
+
+  .question-card {
+    padding: 20px;
+  }
+
+  .question-card h2 {
+    font-size: 19px;
+  }
+
+  .ai-answer {
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.answer-content {
+  max-height: none !important;
+  height: auto !important;
+  overflow: visible !important;
+  white-space: normal;
+}
+}
